@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>jsux - kmom01</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js" defer></script>
+</head>
+<body>
+    <div id="presentation" class="presentation"></div>
+
+    <div id="slide-container" class="slide-container">
+        <div class="slide">
+            <h1>jsux - kmom01</h1>
+        </div>
+
+        <div class="slide">
+            <h1>Agenda</h1>
+            <p>Housekeeping</p>
+            <p>CSS</p>
+            <p>Box-modellen</p>
+            <p>Enheter</p>
+            <p>Funktionell programmering i JavaScript</p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>CSS</h1>
+            <p>Cascading Style Sheets</p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a></p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>CSS-selektorer</h1>
+
+            <p><code>p</code></p>
+            <p><code>.main</code></p>
+            <p><code>div.main</code></p>
+            <p><code>#unique</code></p>
+            <p><code>div li</code></p>
+            <p><code>div li a[href="https://dbwebb.se"]</code></p>
+            <p><code>div>li</code></p>
+            <p><code>div:first-child</code></p>
+            <p><code>div:hover</code></p>
+
+            <p></p>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-klasser</a></p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>CSS-selektorer övning förberedelse</h1>
+
+            <p>I dbwebb-jsux organisationen finns ett slides repo: <a href="https://github.com/dbwebb-jsux/slides">https://github.com/dbwebb-jsux/slides</a>.</p>
+            <p>Gå till repot och klona det utifrån https-länken.</p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>CSS-selektorer övning</h1>
+
+            <p>I det repo som du precis klonat finns katalogen kmom01 med filen <code>index.html</code>. Här finns en struktur med tre olika delar som vi använder i denna föreläsningen.</p>
+
+            <p>Högst upp bör finnas en <code>section</code> med rubriken CSS-selektorer övning. Sedan finns tre element med klassen <code>.selector-box</code>. Ge första och sista elementet olika bakgrundsfärgar. När ni hovrar över elementen ska de få en tredje bakgrundsfärg.</p>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Box-modellen</h1>
+
+
+            <div style="box-sizing: content-box; border: 8px solid red; padding: 12px; margin: 16px; height: 300px; width: 800px;">
+                <p>
+                    box-sizing: content-box; border: 8px solid red; padding: 12px; margin: 16px; height: 300px; width: 800px;
+                </p>
+            </div>
+
+            <div style="box-sizing: border-box; border: 8px solid red; padding: 12px; margin: 16px; height: 300px; width: 800px;">
+                <p>
+                    box-sizing: border-box; border: 8px solid red; padding: 12px; margin: 16px; height: 300px; width: 800px;
+                </p>
+            </div>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">MDN om box</a></p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Enheter</h1>
+
+            <table>
+  <thead>
+    <tr>
+      <th>Unit</th>
+      <th>Name</th>
+      <th>Equivalent to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>cm</code></td>
+      <td>Centimeters</td>
+      <td>1cm = 38px = 25/64in</td>
+    </tr>
+    <tr>
+      <td><code>mm</code></td>
+      <td>Millimeters</td>
+      <td>1mm = 1/10th of 1cm</td>
+    </tr>
+    <tr>
+      <td><code>Q</code></td>
+      <td>Quarter-millimeters</td>
+      <td>1Q = 1/40th of 1cm</td>
+    </tr>
+    <tr>
+      <td><code>in</code></td>
+      <td>Inches</td>
+      <td>1in = 2.54cm = 96px</td>
+    </tr>
+    <tr>
+      <td><code>pc</code></td>
+      <td>Picas</td>
+      <td>1pc = 1/6th of 1in</td>
+    </tr>
+    <tr>
+      <td><code>pt</code></td>
+      <td>Points</td>
+      <td>1pt = 1/72th of 1in</td>
+    </tr>
+    <tr>
+      <td><code>px</code></td>
+      <td>Pixels</td>
+      <td>1px = 1/96th of 1in</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">MDN om enheder</a></p>
+
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Enheter fortsatt</h1>
+            <table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Unit</th>
+      <th scope="col">Relative to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>em</code></td>
+      <td>
+        Font size of the parent, in the case of typographical properties like
+        <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, and font size of the element itself, in the case of other properties
+        like <code><a href="/en-US/docs/Web/CSS/width">width</a></code>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>ex</code></td>
+      <td>x-height of the element's font.</td>
+    </tr>
+    <tr>
+      <td><code>ch</code></td>
+      <td>The advance measure (width) of the glyph "0" of the element's font.</td>
+    </tr>
+    <tr>
+      <td><code>rem</code></td>
+      <td>Font size of the root element.</td>
+    </tr>
+    <tr>
+      <td><code>lh</code></td>
+      <td>Line height of the element.</td>
+    </tr>
+    <tr>
+      <td><code>vw</code></td>
+      <td>1% of the viewport's width.</td>
+    </tr>
+    <tr>
+      <td><code>vh</code></td>
+      <td>1% of the viewport's height.</td>
+    </tr>
+    <tr>
+      <td><code>vmin</code></td>
+      <td>1% of the viewport's smaller dimension.</td>
+    </tr>
+    <tr>
+      <td><code>vmax</code></td>
+      <td>1% of the viewport's larger dimension.</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+
+    <div class="slide fade-in">
+        <h1>Box-model och enheter övning</h1>
+
+        <p>I section-elementet med rubriken Box-modellen och enheter gör följande:</p>
+
+        <p>Lägg till 4 element:</p>
+        <ol>
+            <li>Ett element med 600px bredd, 100px högt, har bakgrundsfärg svart och content-box.</li>
+            <li>Ett element med 100% bredd, 100px högt, har bakgrundsfärg blå och content-box.</li>
+            <li>Ett element som fyller upp 50% av viewportens bredd, 100px högt, är rött och border-box.</li>
+            <li>Ett element som fyller ut exakt hela tillgängliga bredden, 100px högt och är grön.</li>
+        </ol>
+
+        <p>Kolla vad som händer när du använder "responsive design mode" i webbläsaren.</p>
+
+        <div data-time="15:00" class="timer"></div>
+    </div>
+
+    <div class="slide fade-in">
+        <h1>Funktionell programmering i JavaScript</h1>
+
+        <p>Vad är en programmeringsparadigm?</p>
+    </div>
+
+    <div class="slide fade-in">
+        <h1>Funktionell programmering i JavaScript forts.</h1>
+
+        <p>Objekt i JavaScript</p>
+
+        <pre><code>let cake = {
+    name: "Princesstårta",
+    price: 120,
+    amount: 10,
+}
+        </code></pre>
+
+        <p>Allt är objekt i JavaScript. Till och med arrayer och funktioner.</p>
+    </div>
+
+
+    <div class="slide fade-in">
+        <h1>Funktionell programmering i JavaScript forts.</h1>
+
+        <p>Higher-Order functions?????</p>
+
+        <p>En funktion som tar en annan funktion som argument.</p>
+
+        <p>Exempel: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.prototype.map()</a>.</p>
+    </div>
+
+
+    <div class="slide fade-in">
+        <h1>Funktionell programmering i JavaScript övning</h1>
+
+        <p>I <code>main.js</code> i katalogen kmom01 finns en array.</p>
+
+        <p>Använd <code>Array.prototype.map()</code> för att skriva ut namnet och priset på kakorna i elementet <code>#cakes</code>.</p>
+
+        <div data-time="10:00" class="timer"></div>
+    </div>
+
+
+
+        <div class="slide">
+            <h1>The end</h1>
+            <p>This is the end<br>Beautiful friend<br>This is the end<br>My only friend<br>The end</p>
+        </div>
+    </div>
+</body>
+</html>
