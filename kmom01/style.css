@@ -32,7 +32,6 @@ p {
 section {
     margin-bottom: 1.4rem;
 }
-
 .container {
     width: 98%;
     max-width: 67rem;
@@ -47,8 +46,33 @@ section {
     justify-content: space-between;
 }
 
-.selector-box {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #ccc;
+.selector-box1 {
+    width: 50px;
+    height: 50px;
+    background-color: #5ebcd0;
+    border: 1px solid black;
+}
+.selector-box2 {
+    width: 50px;
+    height: 50px;
+    background-color: #b39c4f;
+    border: 1px solid black;
+}
+.selector-box3 {
+    width: 50px;
+    height: 50px;
+    background-color:  #1D1D1D;
+    border: 1px solid black;
+}
+.selector-box4 {
+    width: 50px;
+    height: 50px;
+    background-color:  #0000EE;
+    border: 1px solid black;
+}
+.selector-box5 {
+    width: 50px;
+    height: 50px;
+    background-color:  #A00707;
+     border: 1px solid black;
 }
