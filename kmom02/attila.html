@@ -1,19 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <title>Min musik‑webbshop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<table style="border-spacing: 4px; border-collapse: separate">
-<tr>
-<td style="height: 50px; width: 50px; background-color: #ef0"></td>
-<td style="height: 50px; width: 50px; background-color: #0ef"></td>
-<td style="height: 50px; width: 50px; background-color: #f0e"></td>
-</tr>
-</table>
 <body>
-    
-</body>
-</html>
+  <header>
+    <h1>Mitt skivbolag</h1>
+    <nav>
+      <a href="#hero">Hem</a>
+      <a href="#products">Album</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <h2>Nyheter & favoriter</h2>
+      <p>Utforska våra utvalda musik‑album.</p>
+    </section>
+
+    <section id="products" class="products">
+      <h2>Alla album</h2>
+      <div class="product-list">
+        <article class="product">
+          <img src="img/album1.jpg" alt="Album 1">
+          <h3>Albumtitel 1</h3>
+        </article>
+        <article class="product">
+          <img src="img/album2.jpg" alt="Album 2">
+          <h3>Albumtitel 2</h3>
+        </article>
+        <!-- fler album här -->
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
