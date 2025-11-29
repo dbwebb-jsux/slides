@@ -19,17 +19,47 @@ main.container {
     background-color: #fff;
 }
 
+.header {
+    background-color: #008080;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    gap: 1rem;
+}
+
+.header .logo {
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
 .footer {
     background-color: #333;
     color: #fff;
 }
 
-/* gör hero-bilden responsiv */
+
 img {
     max-width: 100%;
 }
 
-/* produktlista från API:t */
+
+
+
+
 .product {
     display: flex;
     flex-direction: row;
