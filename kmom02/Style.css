@@ -10,6 +10,13 @@ body {
     
 }
 
+
+.container h1 {
+  font-size: 70px;   /* try 40px, 48px, 56px, etc. */
+  font-weight: 700;  /* optional: makes it bold */
+}
+
+
 main.container {
     flex: 1;
 }
@@ -29,22 +36,10 @@ main.container {
 
 .header .logo {
     height: 500px;
-    width: 500px;
+    width: 2500px;
     border-radius: 4px;
     object-fit: cover;
 }
-
-.logo {
-  height: 80px;
-  width: auto;
-  display: block;
-}
-.header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 
 .footer {
     background-color: #333;
